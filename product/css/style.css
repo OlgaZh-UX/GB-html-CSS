@@ -217,8 +217,8 @@ section:after {
     box-sizing: border-box;
     min-height: 250px;
     background-color: #f5f5f5;
-    /*display: flex;
-    flex-flow: wrap;*/
+    display: flex;
+    flex-flow: wrap;
 }
 
 .reviews-title {
@@ -233,25 +233,58 @@ section:after {
 }
 
 .review-item {
-    width: 470px;
+    width: 575px;
     display: block;
+    margin-bottom: 24px;
+    margin-right: 20px;
 }
 
-.review-photo {
-    float: left;
+.review-item:nth-child(2n+1) {
+    margin-right: 0;
+}
+
+
+.review-photo {  
     display: block;
+    float: left;  
+    margin-right: 24px ;
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    background-color: #445161;    
+    background-color: #445161;
 }
 
-.review-txt {
+.review-txt {  
     display: inline-block;
+    width: 470px;  
+    position: relative;
     background-color:#ebebeb;
     padding: 16px;
     box-sizing: border-box;
     border-radius: 6px;
+}
+.review-txt p {
+    margin: 0;
+    font-style: italic;
+}
+
+.review-txt:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: -30px;
+    border: 20px solid transparent; 
+    border-right: 20px solid #ebebeb;
+}
+
+.review-autor { 
+    color: #989898;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    display: inline-block;
+    padding-top: 16px ;
 }
 
 .buy {
@@ -279,7 +312,9 @@ section:after {
 .buy-item{    
     width: 300px;
     background-color: #445161;
-    border-radius: 4px;
+    border-radius: 6px;    
+    padding: 0 20px 20px 20px;
+    box-sizing: border-box;
 }
 
 .buy-item-title {  
@@ -293,7 +328,7 @@ section:after {
 }
 .buy-price {
     display: block;
-    margin: 0 2px;
+    margin: 0 -18px;
     color: #445161;
     background-color: #ffffff;
     font-size: 40px;
@@ -307,12 +342,127 @@ section:after {
     content: "$";
 }
 
-.buy-list {
-    padding: 20px;
-    box-sizing: border-box;
+.buy-list {    
     list-style-position: inside;
     color: #ffffff;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.btn {   
+    display: block;
+    padding: 12px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 260px;
+    min-height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    color: #445161;    
+    font-size: 18px;
+    font-weight: 600;  
+    line-height: 18px;  
+    text-transform: uppercase;
+    background-color: #ffffff;
+}
+
+.btn:hover {
+    box-shadow: 0px 4px 4px #333333;
+    outline: #333333;
+}
+
+.btn:active {
+    box-shadow: inset 0px 2px 4px #333333;
+    color: #333333;
+}
+
+footer {
+    width: 100%;
+    min-height: 323px;
+    padding: 50px;
+    box-sizing: border-box;
+    background-color: #445161;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-title {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+}
+
+.footer-form {    
+    width: 500px;
+    margin-right: 45px;
+    text-align: center;
+}
+
+input, textarea {
+    display: block;    
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;    
+    padding: 12px 10px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 6px;    
+    line-height: 16px;
+}
+
+textarea {    
+    height: 170px;
+    font-family: Arial;    
+}
+
+input:focus, textarea:focus {    
+    outline: #445162;
+}
+
+.btn-form {    
+    width: 140px;    
+}
+
+.contact-list {
+    display: block;
+    width: 240px;
+}
+
+.contact-item {
+    margin: 0 0 20px 0;
+}
+
+.contact-link {
+    float: left;
+    margin-right: 5px;
+}
+
+.contact-item figcaption {
+    height: 26px;
+    line-height: 26px;
+
+}
+
+.footer-copyright {
+    display: block;
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    background-color: #f5f5f5;
+    text-align: center;
 }
