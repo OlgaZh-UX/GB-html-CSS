@@ -93,6 +93,7 @@ section:after {
 
 .about p {
     color: #333333;
+    margin: 0;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -443,19 +444,42 @@ input:focus, textarea:focus {
     width: 240px;
 }
 
-.contact-item {
-    margin: 0 0 20px 0;
-}
 
 .contact-link {
-    float: left;
-    margin-right: 5px;
-}
-
-.contact-item figcaption {
+    display: block;    
+    margin: 0 0 20px 0;
     height: 26px;
     line-height: 26px;
+    text-decoration: none;
+    color: #ffffff;
+}
 
+.contact-link:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 26px;
+    height: 26px;    
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.skype:before {       
+    background-image: url('../img/skype_icon.png');
+}
+
+.icq:before {
+    background-image: url('../img/icq_icon.png');
+}
+
+.email:before {
+    background-image: url('../img/email_icon.png');
+}
+
+.phone:before {
+    background-image: url('../img/phone_icon.png');
 }
 
 .footer-copyright {
