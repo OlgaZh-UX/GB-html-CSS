@@ -419,11 +419,11 @@ input, textarea {
     color: #445162;
     font-size: 16px;
     font-weight: 400;    
-    padding: 12px 10px;
+    padding: 8px 10px;
     box-sizing: border-box;
     outline: none;
     border-radius: 6px;    
-    line-height: 16px;
+    line-height: 24px;
 }
 
 textarea {    
@@ -441,17 +441,17 @@ input:focus, textarea:focus {
 
 .contact-list {
     display: block;
-    width: 240px;
+    width: 240px;   
 }
-
-
 .contact-link {
-    display: block;    
-    margin: 0 0 20px 0;
+    display: block; 
+    margin-bottom: 20px;
+    padding-left: 35px;
     height: 26px;
     line-height: 26px;
     text-decoration: none;
     color: #ffffff;
+    position: relative;
 }
 
 .contact-link:before {
@@ -459,18 +459,19 @@ input:focus, textarea:focus {
     display: block;
     position: absolute;
     top: 0;
-    left: -30px;
+    left: 0;
     width: 26px;
-    height: 26px;    
+    height: 26px;         
     -webkit-background-size: cover;
     background-size: cover;
 }
 
-.skype:before {       
+.skype:before {  
+    width: 24px;        
     background-image: url('../img/skype_icon.png');
 }
 
-.icq:before {
+.icq:before {    
     background-image: url('../img/icq_icon.png');
 }
 
@@ -480,6 +481,34 @@ input:focus, textarea:focus {
 
 .phone:before {
     background-image: url('../img/phone_icon.png');
+}
+
+.social-link {
+    display: block;
+    float: left;
+    width: 42px;
+    height: 42px;
+    margin-right: 5px;
+}
+
+.twitter{
+    background-image: url('../img/twitter.png');
+}
+
+.facebook {
+    background-image: url('../img/facebook.png');
+}
+
+.linkedin {
+    background-image: url('../img/linkedin.png');
+}
+
+.google-plus {
+    background-image: url('../img/google_plus.png');
+}
+
+.youtube{
+    background-image: url('../img/youtube.png');
 }
 
 .footer-copyright {
