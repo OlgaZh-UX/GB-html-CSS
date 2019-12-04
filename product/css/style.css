@@ -428,7 +428,8 @@ input, textarea {
 
 textarea {    
     height: 170px;
-    font-family: Arial;    
+    font-family: Arial;
+    resize: none;   
 }
 
 input:focus, textarea:focus {    
@@ -483,32 +484,37 @@ input:focus, textarea:focus {
     background-image: url('../img/phone_icon.png');
 }
 
+.social {
+    width: 100%;
+}
+
 .social-link {
     display: block;
-    float: left;
+    float: left;    
     width: 42px;
     height: 42px;
-    margin-right: 5px;
+    margin-right: 5px;    
+    background-image: url('../img/social_buttons.png');
 }
 
-.twitter{
-    background-image: url('../img/twitter.png');
+.social-link:nth-child(1) {
+    background-position: -1px 0;
 }
 
-.facebook {
-    background-image: url('../img/facebook.png');
+.social-link:nth-child(2) {
+    background-position: 190px 0;
 }
 
-.linkedin {
-    background-image: url('../img/linkedin.png');
+.social-link:nth-child(3) {
+    background-position: 141px 0;
 }
 
-.google-plus {
-    background-image: url('../img/google_plus.png');
+.social-link:nth-child(4) {
+    background-position: 91px 0;
 }
 
-.youtube{
-    background-image: url('../img/youtube.png');
+.social-link:nth-child(5) {
+    background-position: 42px 0;
 }
 
 .footer-copyright {
