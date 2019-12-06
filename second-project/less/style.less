@@ -1,9 +1,8 @@
 @width: 1170px;
-@color: red;
-@border: 1px solid;
+@color-txt: #ffffff;
+@width-content: 1170px;
 
-body {
-    width: @width;
+body {    
     margin: 0 auto;
     font-family: Montserrat;    
 }
@@ -16,27 +15,88 @@ footer {
 
 h1 {
     margin: 0;
-    font-family: "Raleway - Extra Bold";
+    font-family: "Raleway-Extra Bold";
 }
 
 h2 {
-    font-family: "Raleway - Semi Bold";
+    font-family: "Raleway-Semi Bold";
 }
 
 span {
     font-family: Raleway;
 }
 
+p {
+    font-family: Montserrat;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container() {
+    width: @width-content; 
+    margin: 0 auto;
+    color: @color-txt;
+}
+
+header {
+    position: relative;
+    background: url('../img/header-photo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
+    min-height: 1024px;
+}
+
+header:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 17, 17, 0.7);
+    z-index: 2;      
+    clear: both;
+}
+
+.header-content {
+   display: block;
+   position: relative;
+   padding-top: 40px;   
+   z-index: 3;
+   .container();      
+}
+
 .logo {
     position: relative;
+    color: @color-txt;
+    font-family: Raleway;
+    font-size: 34px;
+    font-weight: 400;    
+    letter-spacing: -1.36px;
 }
-.logo:before {
-    content: "";
-    position: absolute;
-    width: 64px;
-    height: 56px;
-    left: 70px;    
+
+.menu {
+    display: block;
+    float: right;
+    min-height: 56px;
+    line-height: 56px;
+    &-item {
+        float: left;
+        padding: 0 15px;
+        color: @color-txt;
+        font-size: 14px;
+        font-weight: 300;
+    }
 }
+
+.slogan {
+    display: block;
+    margin: auto;
+    max-width: 590px;    
+} 
 
 button {
     width: 170px;
