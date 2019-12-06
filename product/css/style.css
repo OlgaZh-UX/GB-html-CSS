@@ -93,7 +93,8 @@ section:after {
 
 .about p {
     color: #333333;
-    margin: 0;
+    margin-right: 0;
+    margin-left: 0;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
