@@ -9,7 +9,10 @@ footer {
 }
 h1 {
   margin: 0;
-  font-family: "Raleway-Extra Bold";
+  font-family: "Raleway";
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 h2 {
   font-family: "Raleway-Semi Bold";
@@ -19,6 +22,9 @@ span {
 }
 p {
   font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
 }
 a {
   text-decoration: none;
@@ -58,6 +64,8 @@ header:after {
   font-size: 34px;
   font-weight: 400;
   letter-spacing: -1.36px;
+  min-height: 56px;
+  line-height: 56px;
 }
 .menu {
   display: block;
@@ -72,10 +80,65 @@ header:after {
   font-size: 14px;
   font-weight: 300;
 }
+.menu-item-active {
+  color: #c7b299;
+}
 .slogan {
   display: block;
   margin: auto;
+  margin-top: 308px;
   max-width: 590px;
+  text-align: center;
+}
+.slogan-title {
+  margin-bottom: 14px;
+  font-size: 36px;
+  font-weight: 500;
+}
+.slogan-txt {
+  margin-bottom: 50px;
+}
+.carousel {
+  position: absolute;
+  margin-left: -40px;
+  margin-right: -40px;
+  top: 50%;
+  width: 1250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.pagination {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+.circle {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #ffffff;
+  opacity: 0.5;
+}
+.circle-active {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #d3c1ad;
+  background-color: #ffffff;
 }
 button {
   width: 170px;
@@ -83,6 +146,6 @@ button {
   -webkit-box-shadow: inset 0 -3px 0 #736357;
           box-shadow: inset 0 -3px 0 #736357;
   border-radius: 3px;
+  color: #ffffff;
   background-color: #998675;
-  background-color: #111111;
 }
