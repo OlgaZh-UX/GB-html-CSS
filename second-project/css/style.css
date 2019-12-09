@@ -16,12 +16,20 @@ h1 {
 }
 h2 {
   margin: 0;
+  margin-bottom: 24px;
   font-family: "Raleway";
+  font-weight: 600;
+}
+h3 {
+  margin: 0;
+  font-family: Raleway;
+  font-weight: 400;
 }
 span {
   font-family: Raleway;
 }
 p {
+  margin: 0;
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 300;
@@ -195,20 +203,176 @@ header:after {
   width: 15px;
   height: 15px;
   border: 2px solid #d3c1ad;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 .circle:active {
   width: 15px;
   height: 15px;
   border: 2px solid #d3c1ad;
-  background-color: #736357;
 }
-button {
+.btn {
+  display: block;
   width: 170px;
   height: 50px;
+  line-height: 50px;
   -webkit-box-shadow: inset 0 -3px 0 #736357;
           box-shadow: inset 0 -3px 0 #736357;
   border-radius: 3px;
+  border: none;
   color: #ffffff;
   background-color: #998675;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+.btn-header {
+  margin: 0 auto;
+}
+.btn:hover {
+  color: #363636;
+  background-color: #c7b299;
+}
+.btn:active {
+  color: #736357;
+  background-color: #c7b299;
+}
+.about-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 373px;
+  width: 1170px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+.about-tabs-item {
+  display: block;
+  max-width: 267px;
+  min-height: 215px;
+  color: #555555;
+  text-align: center;
+}
+.about-tabs-item::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 70px;
+  height: 3px;
+  background-color: #f1eee9;
+}
+.about-tabs-item-img {
+  display: block;
+  margin: 0 auto 30px auto;
+  fill: #555555;
+}
+.about-tabs-item-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.about-tabs-item-txt {
+  margin-bottom: 30px;
+  color: #8c8c8c;
+  font-size: 14px;
+}
+.about-tabs-item:hover .about-tabs-item-title {
+  color: #c7b299;
+}
+.about-tabs-item:hover .about-tabs-item-img {
+  fill: #c7b299;
+}
+.about-tabs-item:hover:after {
+  background-color: #c7b299;
+}
+.about-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 700px;
+  padding-top: 83px;
+  background-color: #fbfaf8;
+  background-image: url(../img/browser-center.png), url(../img/browser-left.png), url(../img/browser-right.png);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: auto, auto, auto;
+  background-position: left 50% bottom, left 20% bottom, left 80% bottom;
+}
+.about-screen-title {
+  color: #555555;
+  font-size: 30px;
+}
+.about-screen-txt {
+  max-width: 757px;
+  color: #8c8c8c;
+  font-size: 16px;
+  text-align: center;
+}
+aside {
+  display: block;
+  min-height: 150px;
+  background-color: #f4f5f8;
+  background-image: -webkit-gradient(linear, left top, right top, from(#211b19), to(#4e3427));
+  background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
+}
+.advise {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 48px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1170px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+.advise-title {
+  color: #ffffff;
+  font-size: 28px;
+}
+.advise-title span {
+  color: #c7b299;
+}
+.advise-txt {
+  color: #615855;
+  font-size: 18px;
+}
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 700px;
+  padding-top: 81px;
+}
+.project-title {
+  color: #555555;
+  font-size: 30px;
+}
+.project-txt {
+  max-width: 757px;
+  color: #8c8c8c;
+  font-size: 16px;
+  text-align: center;
 }
