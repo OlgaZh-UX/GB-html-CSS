@@ -188,6 +188,24 @@ header:after {
 .menu-item:active {
   color: #c7b299;
 }
+.basket,
+.search {
+  display: block;
+  float: left;
+  padding: 0 15px;
+  fill: #ffffff;
+}
+.basket:hover,
+.search:hover {
+  fill: #998675;
+}
+.basket:active,
+.search:active {
+  fill: #c7b299;
+}
+.basket {
+  margin-left: 30px;
+}
 .slogan {
   display: block;
   margin: auto;
