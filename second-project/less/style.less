@@ -1,4 +1,4 @@
-@width: 1170px;
+@width: 1920px;
 @color-txt: #ffffff;
 @color-txt-dark: #363636;
 @color-txt-grey: #555555;
@@ -90,6 +90,7 @@
 
 
 body {    
+    max-width: @width;
     margin: 0 auto;
     font-family: montserrat;    
 }
@@ -256,16 +257,15 @@ header:after {
     display: block;
     width: 10%;
     text-align: center;
-    &-item{
-        fill: @color-txt;
-        opacity: .5;
+    fill: @color-txt;
+    opacity: .5;
         &:hover {
             fill: @color-btn-circle;
         }
         &:active {
             fill: @color-btn;
         }
-    }
+    
 }
 
 .pagination {      
