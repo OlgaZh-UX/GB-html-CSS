@@ -288,24 +288,87 @@
             </div>
             <button class="btn">Load More</button>
         </section>
-        <section class="video-section">
-            <video autoplay muted loop id="video">
-                <source src="rain.mp4" type="video/mp4">
+        <section class="presentation">
+            <video autoplay muted loop id="video" class="presentation-video" poster="video/cover.jpg">
+                <source src="video/mountains.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
-            <div class="video-content">
-                <button>
-                    <svg class="video-play" xmlns="http://www.w3.org/2000/svg" 
+            <div class="presentation-content">
+                <button id="pause-play" onclick="PausePlay()">
+                    <svg class="presentation-play" xmlns="http://www.w3.org/2000/svg" 
                     width="70" height="70" viewBox="0 0 70 70">
                         <path d="M29.934 51.82a2.06 2.06 0 0 1-2.06-2.06V20.235a2.06 2.06 0 0 1 3.379-1.582l17.714 14.762a2.059 2.059 0 0 1 0 3.165L31.253 51.343a2.06 2.06 0 0 1-1.32.477zm2.06-27.187v20.73l12.437-10.366zm2.943 45.365a34.807 34.807 0 0 1-17.106-4.47 2.06 2.06 0 1 1 2.02-3.59c12.019 6.765 27.231 4.673 36.994-5.093 12.047-12.047 12.047-31.648 0-43.695-12.047-12.049-31.649-12.048-43.695 0-12.046 12.047-12.046 31.648 0 43.695a2.06 2.06 0 0 1-2.913 2.914c-13.653-13.654-13.653-35.869 0-49.523 13.654-13.652 35.867-13.653 49.522 0 13.653 13.654 13.653 35.869 0 49.523C53.033 66.484 44.026 70 34.937 70z"/>
                         <path d="M29.934 51.82a2.06 2.06 0 0 1-2.06-2.06V20.235a2.06 2.06 0 0 1 3.379-1.582l17.714 14.762a2.059 2.059 0 0 1 0 3.165L31.253 51.343a2.06 2.06 0 0 1-1.32.477zm2.06-27.187v20.73l12.437-10.366zm2.943 45.365a34.807 34.807 0 0 1-17.106-4.47 2.06 2.06 0 1 1 2.02-3.59c12.019 6.765 27.231 4.673 36.994-5.093 12.047-12.047 12.047-31.648 0-43.695-12.047-12.049-31.649-12.048-43.695 0-12.046 12.047-12.046 31.648 0 43.695a2.06 2.06 0 0 1-2.913 2.914c-13.653-13.654-13.653-35.869 0-49.523 13.654-13.652 35.867-13.653 49.522 0 13.653 13.654 13.653 35.869 0 49.523C53.033 66.484 44.026 70 34.937 70z"/>
                     </svg>
                 </button>
-                <h2>Waxom Video Presentation</h2>
-                <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</p>
+                <h2 class="presentation-content-title">Waxom Video Presentation</h2>
+                <p class="presentation-content-txt">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</p>
+                <p class="presentation-content-time">00:15</p>
+            </div>
+        </section>
+        <section class="mobile">
+            <img class="mobile-img" src="img/iPhone_in_hand.png" alt="mobile" width="423" height="616">
+            <div class="mobile-content">
+                <h2 class="mobile-content-title">Excellent for Mobile Devices.</h2>
+                <p class="mobile-content-txt">Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                <details class="mobile-content-details">
+                    <summary>
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="21" height="21" viewBox="0 0 21 21">
+                            <path d="M20.998 10.5c0 5.798-4.7 10.498-10.498 10.498C4.702 20.998 0 16.298 0 10.499.001 4.701 4.701.001 10.5.001s10.498 4.7 10.498 10.498zm-7.004 0a.692.692 0 0 0-.205-.498l-4.54-4.54a.7.7 0 1 0-.989.99l4.047 4.047-4.047 4.046a.7.7 0 0 0 .99.99l4.539-4.538a.698.698 0 0 0 .205-.498z"/>
+                            <path d="M20.998 10.5c0 5.798-4.7 10.498-10.498 10.498C4.702 20.998 0 16.298 0 10.499.001 4.701 4.701.001 10.5.001s10.498 4.7 10.498 10.498zm-7.004 0a.692.692 0 0 0-.205-.498l-4.54-4.54a.7.7 0 1 0-.989.99l4.047 4.047-4.047 4.046a.7.7 0 0 0 .99.99l4.539-4.538a.698.698 0 0 0 .205-.498z"/></g></g>
+                        </svg>
+                        Nam liber tempor cum soluta nobis eleifend option;
+                    </summary>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam accusantium ad rem cum nemo iste incidunt beatae asperiores laudantium iusto.</p>
+                </details>
+                <details class="mobile-content-details">
+                    <summary>
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="21" height="21" viewBox="0 0 21 21">
+                            <path d="M20.998 10.5c0 5.798-4.7 10.498-10.498 10.498C4.702 20.998 0 16.298 0 10.499.001 4.701 4.701.001 10.5.001s10.498 4.7 10.498 10.498zm-7.004 0a.692.692 0 0 0-.205-.498l-4.54-4.54a.7.7 0 1 0-.989.99l4.047 4.047-4.047 4.046a.7.7 0 0 0 .99.99l4.539-4.538a.698.698 0 0 0 .205-.498z"/>
+                            <path d="M20.998 10.5c0 5.798-4.7 10.498-10.498 10.498C4.702 20.998 0 16.298 0 10.499.001 4.701 4.701.001 10.5.001s10.498 4.7 10.498 10.498zm-7.004 0a.692.692 0 0 0-.205-.498l-4.54-4.54a.7.7 0 1 0-.989.99l4.047 4.047-4.047 4.046a.7.7 0 0 0 .99.99l4.539-4.538a.698.698 0 0 0 .205-.498z"/></g></g>
+                        </svg>
+                        Option congue nihil imperdiet doming id quod mazim placerat facer;
+                    </summary>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic adipisci et neque saepe esse porro?</p>
+                </details>
+                <details class="mobile-content-details">    
+                    <summary>
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="21" height="21" viewBox="0 0 21 21">
+                            <path d="M20.998 10.5c0 5.798-4.7 10.498-10.498 10.498C4.702 20.998 0 16.298 0 10.499.001 4.701 4.701.001 10.5.001s10.498 4.7 10.498 10.498zm-7.004 0a.692.692 0 0 0-.205-.498l-4.54-4.54a.7.7 0 1 0-.989.99l4.047 4.047-4.047 4.046a.7.7 0 0 0 .99.99l4.539-4.538a.698.698 0 0 0 .205-.498z"/>
+                            <path d="M20.998 10.5c0 5.798-4.7 10.498-10.498 10.498C4.702 20.998 0 16.298 0 10.499.001 4.701 4.701.001 10.5.001s10.498 4.7 10.498 10.498zm-7.004 0a.692.692 0 0 0-.205-.498l-4.54-4.54a.7.7 0 1 0-.989.99l4.047 4.047-4.047 4.046a.7.7 0 0 0 .99.99l4.539-4.538a.698.698 0 0 0 .205-.498z"/></g></g>
+                        </svg>
+                        Eodem modo typi, qui nunc nobis videntur parum futurum;
+                    </summary>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quo hic nihil cum perferendis qui quia excepturi obcaecati!</p>
+                </details>
+                <details class="mobile-content-details">   
+                    <summary>
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="21" height="21" viewBox="0 0 21 21">
+                            <path d="M20.998 10.5c0 5.798-4.7 10.498-10.498 10.498C4.702 20.998 0 16.298 0 10.499.001 4.701 4.701.001 10.5.001s10.498 4.7 10.498 10.498zm-7.004 0a.692.692 0 0 0-.205-.498l-4.54-4.54a.7.7 0 1 0-.989.99l4.047 4.047-4.047 4.046a.7.7 0 0 0 .99.99l4.539-4.538a.698.698 0 0 0 .205-.498z"/>
+                            <path d="M20.998 10.5c0 5.798-4.7 10.498-10.498 10.498C4.702 20.998 0 16.298 0 10.499.001 4.701 4.701.001 10.5.001s10.498 4.7 10.498 10.498zm-7.004 0a.692.692 0 0 0-.205-.498l-4.54-4.54a.7.7 0 1 0-.989.99l4.047 4.047-4.047 4.046a.7.7 0 0 0 .99.99l4.539-4.538a.698.698 0 0 0 .205-.498z"/></g></g>
+                        </svg>
+                        Investigationes demonstraverunt lectores</summary>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi vero quas repellat aut dolor?</p>
+                </details> 
             </div>
         </section>
     </main>
     <footer></footer>
+    <script>
+        var video = document.getElementById("video");
+        var btn = document.getElementById("pause-play");
+        
+        function PausePlay() {
+          if (video.paused) {
+            video.play();            
+          } else {
+            video.pause();            
+          }
+        }
+    </script>
 </body>
 </html>

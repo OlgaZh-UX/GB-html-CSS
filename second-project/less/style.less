@@ -2,6 +2,7 @@
 @color-txt: #ffffff;
 @color-txt-dark: #363636;
 @color-txt-grey: #555555;
+@color-txt-brown: #8c8c8c;
 @color-bg-light: #fbfaf8;
 @color-active: #c7b299;
 @color-btn: #998675;
@@ -114,6 +115,7 @@ h2 {
     margin-bottom: 24px;
     font-family: raleway;
     font-weight: 600;
+    font-size: 30px;
 }
 
 h3 {
@@ -221,11 +223,9 @@ header:after {
     display: block;
     float: right;
     
-    &-item {
-        min-height: 56px;
-        line-height: 56px;
+    &-item {               
         float: left;
-        padding: 0 15px;
+        padding: 10px 15px;
         color: @color-txt;
         font-size: 14px;
         font-weight: 300;        
@@ -242,7 +242,7 @@ header:after {
 .search {
     display: block;
     float: left;
-    padding: 0 15px;
+    padding: 3px 15px;
     fill: @color-txt;
     &:hover {
         fill: @color-btn;
@@ -379,7 +379,7 @@ header:after {
             }
             &-txt {
                 margin-bottom: 30px;
-                color: #8c8c8c;                
+                color: @color-txt-brown;                
                 font-size: 14px;                
             }
             &:hover &-title {
@@ -407,12 +407,11 @@ header:after {
         background-size: auto, auto, auto;
         background-position: left 50% bottom, left 20% bottom, left 80% bottom;
         &-title {
-            color: #555555;
-            font-size: 30px;
+            color: @color-txt-grey;            
         }
         &-txt {
             max-width: 757px;
-            color: #8c8c8c;
+            color: @color-txt-brown;
             font-size: 16px;
             text-align: center;
         }
@@ -446,19 +445,20 @@ header:after {
 }
 
 .project {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;        
     min-height: 700px;
     padding: 80px 0;
+    box-sizing: border-box;
     .container();    
     &-title {
-        color: #555555;
-        font-size: 30px;
+        color: @color-txt-grey;        
     }
     &-txt {
         max-width: 757px;
-        color: #8c8c8c;
+        color: @color-txt-brown;
         font-size: 16px;
         text-align: center;
     }
@@ -470,7 +470,7 @@ header:after {
             border-radius: 3px;          
 
             border: 1px solid #ebebeb;
-            color: #8c8c8c;
+            color: @color-txt-brown;
             background-color: transparent;
             font-family: montserrat;
             font-size: 14px;
@@ -596,17 +596,120 @@ header:after {
         color: @color-active;
     }
 }
-.video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100vh;
-    width: 1280;
-    z-index: 0;
+.presentation {
+    position: relative;
+   
+    &-video {        
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;        
+    }
+    &-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.3);
+        color: @color-txt;
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;                 
+        &-title {
+            max-width: 552px;
+            text-align: center;
+        }
+        &-txt {
+            margin-bottom: 40px;
+            max-width: 552px;
+            line-height: 28px;
+            text-align: center;
+        }
+
+        &-time {
+            color: @color-active;            
+            font-size: 14px;
+            font-weight: 400;            
+        }
+    }
+    #pause-play {
+        width: 100px;
+        height: 100px;        
+        padding: 15px;
+        margin-bottom: 40px;
+        border: none;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.4);        
+        cursor: pointer;
+        &:focus {
+            outline-color: transparent;
+        }            
+    }
     &-play{
+        fill: @color-active;
+    }
+    &-play:hover {
         fill: @color-txt;
+    }
+    &-play:active {
+        fill: @color-btn-circle;
+    } 
+}
+
+.mobile {    
+    padding-top: 80px;
+    box-sizing: border-box;
+    background-color: @color-bg-light;
+    display: flex;
+    justify-content: center;
+    &-img {
+        display: block;   
+
+    }
+    &-content {
+        max-width: 660px;
+        padding-bottom: 80px;
+        color: @color-txt-brown;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &-title {            
+            margin-bottom: 40px;
+        }
+        &-txt {
+            line-height: 28px;                 
+            margin-bottom: 40px;
+        }        
+        details {
+            margin-left: 50px;
+            user-select: none;
+            & p {
+                font-size: .8rem;
+                margin-left: 52px;
+            }            
+        }        
+        details[open] summary svg {
+            transform: rotate(90deg);            
+        }
+        summary {            
+            line-height: 32px;            
+            cursor: pointer;
+        }
+        svg {
+            margin-right: 20px;
+            vertical-align: middle;            
+            fill: @color-active;
+            transition: all 0.3s;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        :focus {
+            outline: none;
+        }
     }
 }
