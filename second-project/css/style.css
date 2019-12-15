@@ -174,11 +174,14 @@ header:after {
   color: #c7b299;
 }
 .menu {
-  display: block;
-  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .menu-item {
-  float: left;
   padding: 10px 15px;
   color: #ffffff;
   font-size: 14px;
@@ -1215,4 +1218,31 @@ aside {
 }
 .copyright-link:hover {
   color: #c7b299;
+}
+@media (max-width: 480px) {
+  .menu {
+    visibility: hidden;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-content {
+    display: none;
+  }
+  .about-tabs {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-wrap: wrap ;
+        flex-wrap: wrap ;
+  }
 }

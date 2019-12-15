@@ -86,8 +86,6 @@
     url('../fonts/raleway/raleway-extrabold.ttf') format('ttf'),    
 }
 
-
-
 body {    
     max-width: @width;
     margin: 0 auto;
@@ -225,11 +223,9 @@ header:after {
     .logo();
 }
 .menu {
-    display: block;
-    float: right;
-    
-    &-item {               
-        float: left;
+    display: flex;
+    justify-content: flex-end;  
+    &-item {
         padding: 10px 15px;
         color: @color-txt;
         font-size: 14px;
@@ -288,8 +284,7 @@ header:after {
         }
         &:active {
             fill: @color-btn;
-        }
-    
+        }    
 }
 
 .pagination {      
@@ -317,10 +312,7 @@ header:after {
         } 
     }
 }
-
-   
-
-
+ 
 .btn {
     display: block;    
     width: 170px;
@@ -602,8 +594,7 @@ header:after {
     }
 }
 .presentation {
-    position: relative;
-   
+    position: relative;   
     &-video {        
         right: 0;
         bottom: 0;
@@ -765,7 +756,6 @@ header:after {
             background-color: #f1eee9;
         }
     }
-
 }
 
 .posts {
@@ -867,8 +857,7 @@ header:after {
     }    
     &:hover &-content {
         background-color: #362f2d;
-    }   
-    
+    }
     &:hover &-title{
         color: @color-active;
     }
@@ -1091,7 +1080,25 @@ header:after {
         &:hover {
             color: @color-active;
         }
+    }    
+}
+
+@media (max-width: 480px) {    
+    .menu {
+        visibility: hidden;
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .header-content {
+        display: none;
+    }
+    .about-tabs {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;        
+        flex-wrap: wrap ;
     }
 
-    
 }
